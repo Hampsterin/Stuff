@@ -1,0 +1,334 @@
+* {
+    margin : 0;
+    padding: 0;
+  }
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url(./images/Carpar.png);
+    background-position: center;
+    background-size: cover;
+    background-color: #cccccc;
+}
+
+
+h1 {
+  color: #cccccc;
+}
+
+h2 {
+  color: #cccccc;
+  text-align: center;
+}
+
+
+.formcontainer {
+  border-radius: 18px;
+  border-style: solid;
+  border-color: black;
+  margin-left: 400px;
+  margin-right: 400px;
+  background-color: #0333d07f;
+  margin: 30px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: #ffffff;
+}
+
+form {
+  display: block;
+  padding: 30px;
+  border-radius: 15px;
+  font-size: 30px;
+}
+
+table {
+  width: 30%;
+  border-collapse: collapse;
+  border-radius: 18px;
+  background-color: #0b33899a;
+}
+
+table.center{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #6487d2f0;
+  text-align: center;
+}
+
+td:nth-child(even) {
+  background-color: #2c77b1; /* Navy Blue */
+}
+
+th {
+  font-style: bold;
+  background-color: #1b2b3ad2; 
+}
+
+td {
+  background-color: #3d8ce0d7; /*Iceberg (Shade of blue) */
+}
+
+.img {
+  text-align: center;
+}
+
+.btncontainer {
+  display: flex;
+  justify-content: center;
+}
+
+.btncontainer button {
+  padding: 20px;
+  padding-left:50px;
+  padding-right:50px;
+}
+
+.confirmbtn {
+  margin: 10px;
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 10px;
+  background-color: #9dafec;
+  cursor: pointer; 
+}
+
+.endbtn {
+  padding: 10px;
+  margin: 20px;
+  font-size: 20px;
+  border-radius: 10px;
+  background-color: #9dafec;
+  cursor: pointer;
+}
+
+/* Add hover effect */
+.confirmbtn:hover {
+  background-color: #9dafec;
+}
+
+.confirmbtn a {
+  text-decoration: none;
+}
+
+.welcometext {
+  padding: 20px;
+  text-align: center;
+}
+
+.parking-container input[type="month"]{
+  padding: 15px;
+  align-items: center;
+}
+
+.parking-container input[type="date"]{
+  padding: 15px;
+  align-items: center;
+}
+
+.parking-container input[type="text"]{
+  padding: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  align-items: center;
+}
+
+.parking-container {
+  color: white;
+  text-align: center;
+  margin: 20px;
+}
+
+  
+  @media (max-width: 900px) {
+    .column2 h3, p{
+      color: white;
+      text-align: center;
+      font-size: 12px;
+      }
+
+    .column1 img {
+      padding: 20px 0px 0px 30px;
+      max-width: 200px;
+      max-height: 50px;
+      }
+
+    .feature a {
+      text-decoration: none;
+      color: inherit;
+      font-size: 18px;
+      } 
+
+    .logo img {
+      padding-left: 10px;
+      max-width: 100px;
+      max-height: 100px;
+    }
+
+    td, th {
+      font-size: 20px;
+    }
+
+    #map img {
+      max-width: 500px ;
+      max-height: 500px;
+    }
+
+    td:nth-child(n+5),th:nth-child(n+5) {display:none}
+  }
+  
+  /* Header CSS */
+
+  header {
+    background-color: #222222;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+  }
+  
+  .logo {
+    font-size: 24px;
+  }
+  
+  .logo img {
+    padding-left: 10px;
+    width: 130px;
+    height: 130px;
+  }
+  
+  .features {
+    font-size: 22px;
+    display: flex;
+    gap: 30px;
+  }
+  
+  .feature {
+    cursor: pointer;
+  }
+  
+  .feature a {
+    text-decoration: none;
+    color: inherit;
+   } 
+  
+  
+  /*---------------------------------------*/
+  /*Footer CSS*/
+
+footer {
+  bottom: 0;
+  position: relative;
+  width: 100%;
+  margin-top: auto;
+  }
+  
+  .footercontainer {
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  background-color: #222222;
+  width: 100%;
+  height: 130px;
+  }
+  
+  .column1 img {
+  padding: 20px 0px 0px 30px;
+  width: 300px;
+  max-height: 110px;
+  }
+  
+  .column2 h3, p{
+  color: white;
+  text-align: center;
+  }
+  
+  .column2 {
+  padding-top: 25px;
+  padding-right: 30px;
+  }
+
+/* ------------ modal styling -------------*/
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+.modal-content {
+  position: relative;
+  background-color: #fff;
+  margin: auto;
+  padding: 0;
+  width: 450px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+  border-radius: 0.3rem;
+}
+.modal-header {
+  padding: 2px 12px;
+  background-color: #ffffff;
+  color: #333;
+  border-bottom: 1px solid #e9ecef;
+  border-top-left-radius: 0.3rem;
+  border-top-right-radius: 0.3rem;
+}
+.modal-header h2{
+  font-size: 1.25rem;
+  margin-top: 14px;
+  margin-bottom: 14px;
+}
+.modal-body {
+  padding: 5px 12px;
+}
+.modal-footer {
+  padding: 1rem;
+  background-color: #ffffff;
+  color: #333;
+  border-top: 1px solid #e9ecef;
+  border-bottom-left-radius: 0.3rem;
+  border-bottom-right-radius: 0.3rem;
+  text-align: right;
+}
+
+.close {
+  color: #888;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close:hover, .close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* add animation effects */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}

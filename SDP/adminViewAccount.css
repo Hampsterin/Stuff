@@ -1,0 +1,178 @@
+* {
+    margin : 0;
+    padding: 0;
+}
+
+body {
+  background-color:rgb(58 135 174);
+  min-height: 25vw;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+    overflow-y: scroll;
+    margin: 20px auto;
+    width: 90vw;
+    padding: 20px;
+    background-color: #0e1e3bb6; /* Indigo */
+    color: #fff;
+    border-radius: 18px;
+    box-shadow: 0px 0px 10px rgba(237, 233, 233, 0.893);
+}
+
+.container::-webkit-scrollbar {
+    width: 6px;
+}
+
+label {
+  font-size:1.5rem;
+}
+
+input[type="text"] {
+  background-color: #78939c;
+    font-size:1.5rem;
+    margin: 20px;
+    padding: 5px;
+    width: 400px;
+}
+
+@media (max-width: 900px) {
+  .column2 h3, p{
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    }
+
+  .column1 img {
+    padding: 20px 0px 0px 30px;
+    max-width: 200px;
+    max-height: 50px;
+    }
+
+  .feature a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 18px;
+    } 
+
+  .logo img {
+    padding-left: 10px;
+    max-width: 100px;
+    max-height: 100px;
+  }
+
+  td, th {
+    font-size: 20px;
+  }
+
+  .img {
+    max-width: 300px ;
+    max-height: 300px;
+  }
+
+  td:nth-child(n+5),th:nth-child(n+5) {display:none}
+
+  .container {
+    overflow-y: scroll;
+  }
+}
+
+button {
+  width:17%;
+  border-radius: 5px;
+  background-color: #187695;
+  padding: 6px;
+}
+
+button {
+  background-color: #3498db;
+  color: #fff; 
+  padding: 15px 20px; 
+  border: none; 
+  border-radius: 5px; 
+  cursor: pointer;
+  align-items: center;
+  margin:5px;
+}
+
+h1 {
+  text-align:center;
+  text-decoration:underline
+}
+
+/* Change button color on hover */
+button:hover {
+  background-color: #2980b9;
+}
+
+/* Header CSS */
+
+header {
+    background-color: #222222;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+  }
+  
+  .logo {
+    font-size: 24px;
+  }
+  
+  .logo img {
+    padding-left: 10px;
+    width: 130px;
+    height: 130px;
+  }
+  
+  .features {
+    font-size: 22px;
+    display: flex;
+    gap: 30px;
+  }
+  
+  .feature {
+    cursor: pointer;
+  }
+  
+  .feature a {
+    text-decoration: none;
+    color: inherit; } 
+  
+  
+  /*---------------------------------------*/
+  /*Footer CSS*/
+  
+footer {
+    margin-top: auto;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+}
+  
+  .footercontainer {
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    background-color: #222222;
+    width: 100%;
+    height: 130px;
+  }
+  
+  .column1 img {
+    padding: 20px 0px 0px 30px;
+    width: 300px;
+    max-height: 110px;
+  }
+  
+  .column2 h3, p{
+    color: white;
+    text-align: center;
+  }
+  
+  .column2 {
+    padding-top: 25px;
+    padding-right: 30px;
+  }

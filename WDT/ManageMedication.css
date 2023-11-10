@@ -1,0 +1,50 @@
+h1 {
+    text-align: center;
+    font-style: bold;
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(0, 0, 0);
+    margin-top: 20px;
+    margin-bottom: 110px;
+}
+
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+body {
+    font-size: 1.3rem;
+    background-image: url(./images/survive.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+input[type=text] {
+    width: 60%;
+    margin: 10px;
+    padding: 10px 20px;
+    display: inline-block;
+    border: 2px solid gray;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+input[type=submit] {
+    padding: 10px;
+    margin: 10px;
+    background-color: #c2bfb6;
+    width: fit-content;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+input[type=submit]:hover {
+    background-color: #b5b0a3;
+}
+
+.inputform {
+    background-color: gray;
+    border-style: solid;
+    padding: 20px;
+    text-align: center;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./adminViewAccount.css">
+    <title>Manage Admin Account - UDP Parking</title>
+</head>
+
+<body>
+  <header>
+    <div class="logo"><a href="./index.html">
+        <img src="./images/logo.png" alt="Logo" />
+    </a></div>
+    <div class="features" id="features">  
+      <div class="feature"><a href="./adminOdoo.html"> Admin Portal </a></div>
+      <div class="feature"><a href="./adminViewAccount.html"> View Account </a></div>
+      <div class="feature"><a href="/logout.html"> Log Out </a></div>
+    </div>
+</header>
+<div class="mainbody">
+<div class= "container">
+  <div id="privacy" class="box"> <br />
+    <form action="https://backend.svrcd.xyz/atas/adminGetAccDetails.php" method="GET" id="reveal" onsubmit="event.preventDefault();">
+      <input type="hidden" id="token" name="token">
+      <h1 style="color  : orangered;">!!! WARNING !!! </h1>
+      <label for="revealbtn"><h1>Click the button to reveal your sensitive data</h1></label>
+      <button name="revealbtn" id="revealbtn" type="submit" form="reveal" onclick="show();"> Reveal Data </button>
+    </form>
+  </div>
+    <div id="data" class="box" style="display: none;"> <br />
+      <form action="https://backend.svrcd.xyz/users/modAccDetails.php" method="post" id="form">
+         <h1>View Details</h1>
+      <br>
+      <label for="name"> Full Name</label>
+      <input id="fullname" type="text" name="fullname" placeholder="Full Name.">
+      <br>
+      <label for="email">Email</label>
+      <input id="email" type="text" name="email" placeholder="Email Address.">
+      <br>
+      <label for="phone">Phone Number</label>
+      <input id="phone" type="text" name="phone" placeholder="Phone Number.">
+      <br>
+      <button type="button" value="goback" name="btnBack" onclick="window.history.back();"> 
+         Back
+      </button>
+      </form>
+    </div>
+</div>
+</div>
+</body>
+<footer>
+    <div class = footercontainer>
+      <div class = "column1">
+        <img src = "./images/WordLogo.png">
+      </div>
+      <div class = "column2">
+        <h3> Contact for Assistance </h3> <br> 
+        <p> Phone Number: +601223334444 <br> 
+        Email: udp.support@gmail.com </p>
+      </div>
+    </div>
+</footer>
+<script src="/script/api.js"></script>
+<script src ="./script/viewAcc.js"> </script>
+</html>

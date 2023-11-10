@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="addVehicle.css">
+  <title>Add Vehicle - UDP Parking</title>
+</head>
+<body>
+  <header>
+    <div class="logo"><a href="/User/index.html">
+      <img src="./images/logo.png" alt="Logo" />
+    </a></div>
+    <div class="features" id="features">  
+      <div class="feature"><a href="../assistance.html"> Help Desk </a></div>
+      <div class="feature"><a href="./accountSettings.html"> Account Settings </a></div>
+      <div class="feature"><a href="/logout.html"> Log Out </a></div>
+    </div>
+    </div>
+</header>
+  <div class="maincontainer">
+    <div class="welcometext">
+      <h2> User ID: <span id="userid"></span></h2>
+      <h2> Please enter your vehicle information: </h2>
+    </div>
+    <div class="form">
+        <form action="https://backend.svrcd.xyz/users/addAutoDetails.php" method="post" id="form" onsubmit="event.preventDefault();">
+            <input type="hidden" id="token" name="token">
+            <label for="plateNo">Plate Number: </label>
+            <input type="text" id="plateNo" name="plateNo" placeholder="Enter Plate Number." required> <br> </br>
+            <label for="confirmType">Vehicle Type: </label>
+            <input type="text" id="confirmType" name="confirmType" placeholder="Enter Vehicle Type." required> <br> </br>
+            <button class="addvehiclebtn" onclick="doubleCheck();">Add Vehicle</button>
+        </form>
+    </div>
+    <div id="confirmInfo" class="modal" style="display: none;">
+      <div class="modal-content">
+        <div class="modal-header">
+            <span id="dasclose" class="close">×</span>
+            <h2>Confirm Vehicle Details</h2>
+        </div>
+        <div class="modal-body" style="background:#004AAD;">
+          <span>Plate No: <p id="plate">loading</p></span>
+          <span>Type: <p id="type">loading</p></span>
+          <br />
+            <p>Please confirm if the above details are accurate.</p>
+            <p>No changes will be allowed.</p>
+        </div>
+        <div id="confirm" class="modal-footer">
+            <button type="submit" form="form" type="button" class="btn btn-primary">Confirm</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+<footer>
+    <div class = footercontainer>
+      <div class = "column1">
+        <img src = "./images/WordLogo.png">
+      </div>
+      <div class = "column2">
+        <h3> Contact for Assistance </h3> <br> 
+        <p> Phone Number: +601223334444 <br> 
+        Email: udp.support@gmail.com </p>
+      </div>
+    </div>
+</footer>
+
+<script src ="./script/addAuto.js"> </script>
+<script src ="/script/api.js"> </script>
+
+</html>

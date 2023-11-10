@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="adminUser.css">
+    <title>Admin User</title>
+</head>
+<header>
+  <div class="logo"><a href="./index.html">
+      <img src="./images/logo.png" alt="Logo" />
+  </a></div>
+  <div class="features" id="features">  
+    <div class="feature"><a href="./adminOdoo.html"> Admin Portal </a></div>
+      <div class="feature"><a href="./adminViewAccount.html"> View Account </a></div>
+    <div class="feature"><a href="/logout.html"> Log Out </a></div>
+  </div>
+</header>
+<body>
+<div class="mainbody">
+    <form action="https://backend.svrcd.xyz/atas/adminSearchUsers.php" onsubmit="event.preventDefault();" method="GET" id="form">
+    <input type="hidden" id="token" name="token">
+    <div class="container">
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search for names...">
+            <button class="confirmbtn" type="submit" form="form" onclick="search();">Search</button>
+            <button class="confirmbtn" type="submit" form="form" onclick="retrieve();">Refresh Table</button>
+        </form>
+        </div>
+        <table id="myTable">
+          <thead>
+            <tr>
+                <th>User ID</th>
+                <th>Full Name</th>
+                <th>Phone Number</th>
+                <th>Email</th>
+                <th>Disabled SN</th>
+                <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Insert Data here from DB-->
+          </tbody>
+            
+        </table>
+    </div>
+</div>
+</body>
+<footer>
+    <div class = footercontainer>
+      <div class = "column1">
+        <img src = "./images/WordLogo.png">
+      </div>
+      <div class = "column2">
+        <h3> Contact for Assistance </h3> <br> 
+        <p> Phone Number: +601223334444 <br> 
+        Email: udp.support@gmail.com </p>
+      </div>
+    </div>
+  </footer>
+<script src ="/script/api.js"> </script>
+<script src ="./script/fetchuser.js"> </script>
+</html>

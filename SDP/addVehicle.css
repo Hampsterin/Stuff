@@ -1,0 +1,260 @@
+* {
+    margin : 0;
+    padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  background-image: url(./images/blueroad.jpg);
+  background-color: #cccccc;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 35vh;
+  flex: 1;  
+}
+
+.maincontainer {
+  margin: 20px;
+  margin-left: 400px;
+  margin-right: 400px;
+  margin-bottom: 150px;
+
+}
+
+.welcometext {
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+label {
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.form {
+    text-align: center;
+    background-color: rgb(135, 206, 235);
+    display: flex;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border-style: solid;
+    border-radius: 20px;
+    padding: 30px 60px 30px 60px;
+    justify-content: center;
+}
+
+.form input {
+    margin: 10px;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+select {
+    margin: 10px;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+button {
+    margin: 10px;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 10px;
+    background-color: rgb(108, 122, 137);
+    cursor: pointer;
+    position: center; 
+}
+
+button:hover {
+    opacity: 0.7;
+}
+
+@media (max-width: 900px) {
+  .column2 h3, p{
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    }
+
+  .column1 img {
+    padding: 20px 0px 0px 30px;
+    max-width: 200px;
+    max-height: 50px;
+    }
+
+  .feature a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 18px;
+    } 
+
+  .logo img {
+    padding-left: 10px;
+    max-width: 100px;
+    max-height: 100px;
+  }
+
+  td, th {
+    font-size: 20px;
+  }
+
+  .maincontainer {
+    margin: 20px;
+  
+  }
+
+
+}
+
+/* Header CSS */
+
+header {
+background-color: #222222;
+color: white;
+padding: 10px 20px;
+display: flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo {
+font-size: 24px;
+}
+
+.logo img {
+padding-left: 10px;
+width: 130px;
+height: 130px;
+}
+
+.features {
+font-size: 22px;
+display: flex;
+gap: 30px;
+}
+
+.feature {
+cursor: pointer;
+}
+
+.feature a {
+text-decoration: none;
+color: inherit; } 
+
+
+/*---------------------------------------*/
+/*Footer CSS*/
+
+footer {
+bottom: 0;
+position: relative;
+width: 100%;
+margin-top: auto;
+}
+
+.footercontainer {
+margin: auto;
+display: flex;
+justify-content: space-between;
+background-color: #222222;
+width: 100%;
+height: 130px;
+}
+
+.column1 img {
+padding: 20px 0px 0px 30px;
+width: 300px;
+max-height: 110px;
+}
+
+.column2 h3, p{
+color: white;
+text-align: center;
+}
+
+.column2 {
+padding-top: 25px;
+padding-right: 30px;
+}
+
+/* ------------ modal styling -------------*/
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+  }
+  .modal-content {
+    position: relative;
+    background-color: #fff;
+    margin: auto;
+    padding: 0;
+    width: 450px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    border-radius: 0.3rem;
+  }
+  .modal-header {
+    padding: 2px 12px;
+    background-color: #ffffff;
+    color: #333;
+    border-bottom: 1px solid #e9ecef;
+    border-top-left-radius: 0.3rem;
+    border-top-right-radius: 0.3rem;
+  }
+  .modal-header h2{
+    font-size: 1.25rem;
+    margin-top: 14px;
+    margin-bottom: 14px;
+  }
+  .modal-body {
+    padding: 5px 12px;
+  }
+  .modal-footer {
+    padding: 1rem;
+    background-color: #ffffff;  
+    color: #333;
+    border-top: 1px solid #e9ecef;
+    border-bottom-left-radius: 0.3rem;
+    border-bottom-right-radius: 0.3rem;
+    text-align: right;
+  }
+  
+  .close {
+    color: #888;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  .close:hover, .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* add animation effects */
+  @-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+  }
+  
+  @keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+  }
